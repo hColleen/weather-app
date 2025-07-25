@@ -42,7 +42,7 @@ $(document).ready(function(){
 
 $.getJSON(forecastAPI,function(data1){
     //loop through forecast
-for(var i = 0; i < data1.list.length; i++){
+for(var i = 0; i < data1.list.length; i+4){
   
  //console.log(data1.list[1].weather[0].description);
     kTempFor = data1.list[i].main.temp_min;
@@ -53,7 +53,7 @@ for(var i = 0; i < data1.list.length; i++){
     weatherIconHTMLFor = '<i class="wi wi-owm-'+weatherIconFor+'"></i>';
     timestamp = data1.list[i].dt,
       date = new Date(timestamp * 1000);
-	  $("#forecast").append("<div class='column'><div class='ui fluid card'><div class='image'>"+weatherIconHTMLFor+"</div><div class='content'>"+weatherTypeFor+"<br>"+fTempFor+"&#8457;/"+cTempFor+"&#8451; at "+date.toLocaleString()+"</div>")
+	  $("#forecast").append("<div class='card'><div class='card-body'><h2 class='card-title'>"+weatherIconHTMLFor+"</h2></div><div class='card-body'>"+weatherTypeFor+"<br>"+fTempFor+"&#8457;/"+cTempFor+"&#8451; at "+date.toLocaleString()+"</div></div>")
 }
 	//set IDs
 	$("#data").html(long.toFixed(2) + " longitude " + lat.toFixed(2) + " latitude");
