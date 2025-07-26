@@ -77,22 +77,29 @@ $(document).ready(function () {
 					$("#windDir").html(windDir + "&#0176; " + windIcon);
 					$('#weather-icon').html(iconcodeHtml);
 
-					//background image by temp
+					//background color by temp
+					const greenColors = ["#0000ff","#004445","#004341","#004d4a","#006860","#00743e","#008000","#6f7a00", "#bd6200", "#ff0000"];
+					const purpleColors = ["#0000ff","#7c00dc", "#a000b5", "#b6009b", "#c60087", "#d40076", "#e10065", "#ee0051", "#fa0036", "#ff0000"];
 					if (fTemp > 100) {
-						$('body').css('background-image', 'url(images/fire-flames.jpg)'),
-							$('body').css('background-size', 'cover');
+						$('body').css('background-color', greenColors[9]);
 					} else if (fTemp > 90) {
-						$('body').css('background-image', 'url(images/nice-weather.jpg)'),
-							$('body').css('background-size', 'cover');
+						$('body').css('background-color', greenColors[8]);
+					} else if (fTemp > 80) {
+						$('body').css('background-color', greenColors[7]);
 					} else if (fTemp > 70) {
-						$('body').css('background-image', 'url(images/clouds.jpg)'),
-							$('body').css('background-size', 'cover');
+						$('body').css('background-color', greenColors[6]);
+					} else if (fTemp > 60) {
+						$('body').css('background-color', greenColors[5]);
 					} else if (fTemp > 50) {
-						$('body').css('background-image', 'url(images/nice-chilly.jpg)'),
-							$('body').css('background-size', 'cover');
+						$('body').css('background-color', greenColors[4]);
+					} else if (fTemp > 40) {
+						$('body').css('background-color', greenColors[3]);
+					} else if (fTemp > 30) {
+						$('body').css('background-color', greenColors[2]);
+					} else if (fTemp > 20) {
+						$('body').css('background-color', greenColors[1]);
 					} else {
-						$('body').css('background-image', 'url(images/cold-weather.jpg)'),
-							$('body').css('background-size', 'cover');
+						$('body').css('background-color', greenColors[0]);
 					}
 					//user selected output  
 					$("input[name$='temp']").click(function () {
