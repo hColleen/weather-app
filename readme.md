@@ -11,7 +11,7 @@ A simple, customizeable weather app that displays the current temperature in a v
 3. This should open a new tab or window in your browser
 
 ## TODO
-- [ ] column/row for forecast
+- [X] column/row for forecast
 - [ ] format forecast cards for easier reading
 - [ ] allow user to chose colors for background
 - [ ] add mobile breakpoints for better exerpience
