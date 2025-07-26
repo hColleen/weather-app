@@ -15,6 +15,7 @@ A simple, customizeable weather app that displays the current temperature in a v
 - [X] format forecast cards for easier reading
 - [ ] allow user to chose colors for background
 - [X] add mobile breakpoints for better exerpience
+- [ ] update API for global usage
 
 
 Live demo at [https://hcolleen.github.io/weather-app/](https://hcolleen.github.io/weather-app/)
