@@ -1,51 +1,48 @@
 <html>
-  <head>
-<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="JS/script.js"></script>
-<link href="CSS/style.css" rel="stylesheet">
-</head>
-<body>
-<div class = "container">
-<div class = "jumbotron">
-<h1>Loca<i class="wi wi-thermometer"></i> Weather</h1>
-<h2><span id = "city"></span></h2>
-<span id = "data"></span>
-</div>
-</div>
-<div class = "container">
-<div class = "jumbotron">
-<h3>Select your preferred units</h3>
-<div id = "tempout">
-<input type = "radio" name = "temp" id = "science" value = "science"><label>Sciencey (temp in &#8490;)</label>
-<input type = "radio" name = "temp" id = "world" value = "world"><label>Talking around the world (temp in both &#8457; and &#8451;)</label><br>
-<input type = "radio" name = "temp" id = "cel" value = "cel"><label>Celsius (temp in &#8451;)</label> 
-<input type = "radio" name = "temp" id = "far" value = "far"><label>Fahrenheit (temp in &#8457;)</label>
-  <input type = "radio" name = "temp" id = "far" value = "all"><label>Show all</label>
 
-</div>
-  <span id = "kTemp"></span>
-  <span id = "fTemp"></span>
-  <span id = "cTemp"></span><br>
-  <span id = "weatherType"></span>
-  <span id = "weather-icon"></span>
-  <span id = "windSpeed"></span>
-  <span id = "windDir"></span>
-  <span id = "windIcon"></span>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="JS/script.js"></script>
+  <link href="CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Loca<i class="wi wi-thermometer"></i> Weather</h1>
+    <h2><span id="city"></span></h2>
+    <span id="data"></span>
   </div>
+  <div class="container">
+    <h3>Select your preferred units</h3>
+    <div id="tempout">
+      <input type="radio" name="temp" id="science" value="science"><label>Sciencey (temp in &#8490;)</label>
+      <input type="radio" name="temp" id="world" value="world"><label>Talking around the world (temp in both &#8457;
+        and &#8451;)</label><br>
+      <input type="radio" name="temp" id="cel" value="cel"><label>Celsius (temp in &#8451;)</label>
+      <input type="radio" name="temp" id="far" value="far"><label>Fahrenheit (temp in &#8457;)</label>
+      <input type="radio" name="temp" id="far" value="all"><label>Show all</label>
+   </div>
+    <span id="kTemp"></span>
+    <span id="fTemp"></span>
+    <span id="cTemp"></span><br>
+    <span id="weatherType"></span>
+    <span id="weather-icon"></span>
+    <span id="windSpeed"></span>
+    <span id="windDir"></span>
+    <span id="windIcon"></span>
   </div>
-  
-  <div class = "jumbotron">
-    <div class = "row" id="forecast">
-    </div>
+  <div class="ui four column grid" id="forecast">
   </div>
 
 </body>
+
 </html>
 todo: column/row for forecast in bootstrap in css and on index
 heatmap type background color change
