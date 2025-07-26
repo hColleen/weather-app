@@ -23,26 +23,29 @@
   </div>
   <div class="ui sizer vertical segment">Select your preferred units
     <div id="tempout">
-      <input type="radio" name="temp" id="science" value="science"><label>Sciencey (temp in &#8490;)</label>
-      <input type="radio" name="temp" id="world" value="world"><label>Talking around the world (temp in both &#8457;
+      <input type="radio" name="temp" id="science" value="science"><label for="science">Sciencey (temp in
+        &#8490;)</label>
+      <input type="radio" name="temp" id="world" value="world"><label for="world">Talking around the world (temp in both
+        &#8457;
         and &#8451;)</label><br>
-      <input type="radio" name="temp" id="cel" value="cel"><label>Celsius (temp in &#8451;)</label>
-      <input type="radio" name="temp" id="far" value="far"><label>Fahrenheit (temp in &#8457;)</label>
-      <input type="radio" name="temp" id="far" value="all"><label>Show all</label>
+      <input type="radio" name="temp" id="cel" value="cel"><label for="cel">Celsius (temp in &#8451;)</label>
+      <input type="radio" name="temp" id="far" value="far"><label for="far">Fahrenheit (temp in &#8457;)</label>
+      <input type="radio" name="temp" id="far" value="all"><label for="all">Show all</label>
     </div>
   </div>
-  <span id="kTemp"></span>
-  <span id="fTemp"></span>
-  <span id="cTemp"></span><br>
-  <span id="weatherType"></span>
-  <span id="weather-icon"></span>
-  <span id="windSpeed"></span>
-  <span id="windDir"></span>
-  <span id="windIcon"></span>
+  <div class="ui sizer vertical segment" id = "current">
+    <span id="kTemp"></span>
+    <span id="fTemp"></span>
+    <span id="cTemp"></span> and 
+    <span id="weatherType"></span>
+    <span id="weather-icon"></span> with wind speeds of 
+    <span id="windSpeed"></span>
+    <span id="windDir"></span>
+    <span id="windIcon"></span>
+  </div>
   </div>
   <div class="ui sizer vertical segment"></div>
-  <div class="ui five column grid" id="forecast">
-  </div>
+  <div class="ui four column doubling grid" id="forecast">
   </div>
 
 </body>

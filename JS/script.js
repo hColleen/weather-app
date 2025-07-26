@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 				$.getJSON(forecastAPI, function (data1) {
 					//loop through forecast
-					for (var i = 0; i < data1.list.length; i += 4) {
+					for (var i = 0; i < data1.list.length; i += 2) {
 
 						//console.log(data1.list[1].weather[0].description);
 						kTempFor = data1.list[i].main.temp_min;
@@ -64,7 +64,7 @@ $(document).ready(function () {
 							cTempFor +
 							"&#8451; at " +
 							date.toLocaleString() +
-							"</div>")
+							"</div></div></div>")
 					}
 					//set IDs
 					$("#data").html(long.toFixed(2) + " longitude " + lat.toFixed(2) + " latitude");
@@ -78,8 +78,8 @@ $(document).ready(function () {
 					$('#weather-icon').html(iconcodeHtml);
 
 					//background color by temp
-					const greenColors = ["#0000ff","#004445","#004341","#004d4a","#006860","#00743e","#008000","#6f7a00", "#bd6200", "#ff0000"];
-					const purpleColors = ["#0000ff","#7c00dc", "#a000b5", "#b6009b", "#c60087", "#d40076", "#e10065", "#ee0051", "#fa0036", "#ff0000"];
+					const greenColors = ["#0000ff", "#004445", "#004341", "#004d4a", "#006860", "#00743e", "#008000", "#6f7a00", "#bd6200", "#ff0000"];
+					const purpleColors = ["#0000ff", "#7c00dc", "#a000b5", "#b6009b", "#c60087", "#d40076", "#e10065", "#ee0051", "#fa0036", "#ff0000"];
 					if (fTemp > 100) {
 						$('body').css('background-color', greenColors[9]);
 					} else if (fTemp > 90) {

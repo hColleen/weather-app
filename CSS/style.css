@@ -11,6 +11,9 @@ body{
 #city{
   font-size: 2em;
 }
+#current{
+  font-size: large;
+}
 i {
     color: #000;
 }
@@ -24,4 +27,8 @@ header{
 }
 #forecast i{
   font-size: 50px;
+}
+.ui.fluid.card{
+  background-color: rgba(15, 15, 15, 0.2);
+  box-shadow: none;
 }

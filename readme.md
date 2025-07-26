@@ -12,9 +12,9 @@ A simple, customizeable weather app that displays the current temperature in a v
 
 ## TODO
 - [X] column/row for forecast
-- [ ] format forecast cards for easier reading
+- [X] format forecast cards for easier reading
 - [ ] allow user to chose colors for background
-- [ ] add mobile breakpoints for better exerpience
+- [X] add mobile breakpoints for better exerpience
 
 
 Live demo at [https://hcolleen.github.io/weather-app/](https://hcolleen.github.io/weather-app/)
