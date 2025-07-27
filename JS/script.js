@@ -82,7 +82,6 @@ $(document).ready(function () {
 					var backgroundColor;
 
 					$("input[name$='color']").click(function () {
-						let backgroundColor = greenColors;
 						if ($(this).val() === "default") {
 							backgroundColor = greenColors;
 						} else {

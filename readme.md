@@ -13,12 +13,9 @@ A simple, customizeable weather app that displays the current temperature in a v
 ## TODO
 - [X] column/row for forecast
 - [X] format forecast cards for easier reading
-- [ ] allow user to chose colors for background
+- [X] allow user to chose colors for background
 - [X] add mobile breakpoints for better exerpience
 ~~- [ ] update API for global usage~~
 
 
 Live demo at [https://hcolleen.github.io/weather-app/](https://hcolleen.github.io/weather-app/)
-
-todo: column/row for forecast in bootstrap in css and on index
-heatmap type background color change
