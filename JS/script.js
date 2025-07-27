@@ -12,7 +12,6 @@ $(document).ready(function () {
 	var iconcode;
 	var iconcodeHtml;
 	var windIcon;
-
 	//get location
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function (position) {
@@ -80,57 +79,67 @@ $(document).ready(function () {
 					//background color by temp
 					const greenColors = ["#0000ff", "#004445", "#004341", "#004d4a", "#006860", "#00743e", "#008000", "#6f7a00", "#bd6200", "#ff0000"];
 					const purpleColors = ["#0000ff", "#7c00dc", "#a000b5", "#b6009b", "#c60087", "#d40076", "#e10065", "#ee0051", "#fa0036", "#ff0000"];
-					if (fTemp > 100) {
-						$('body').css('background-color', greenColors[9]);
-					} else if (fTemp > 90) {
-						$('body').css('background-color', greenColors[8]);
-					} else if (fTemp > 80) {
-						$('body').css('background-color', greenColors[7]);
-					} else if (fTemp > 70) {
-						$('body').css('background-color', greenColors[6]);
-					} else if (fTemp > 60) {
-						$('body').css('background-color', greenColors[5]);
-					} else if (fTemp > 50) {
-						$('body').css('background-color', greenColors[4]);
-					} else if (fTemp > 40) {
-						$('body').css('background-color', greenColors[3]);
-					} else if (fTemp > 30) {
-						$('body').css('background-color', greenColors[2]);
-					} else if (fTemp > 20) {
-						$('body').css('background-color', greenColors[1]);
-					} else {
-						$('body').css('background-color', greenColors[0]);
-					}
-					//user selected output  
-					$("input[name$='temp']").click(function () {
-						if ($(this).val() === "science") {
-							$("#kTemp").css('display', 'inline');
-							$("#fTemp").css('display', 'none');
-							$("#cTemp").css('display', 'none');
-						} else if ($(this).val() === "far") {
-							$("#fTemp").css('display', 'inline');
-							$("#kTemp").css('display', 'none');
-							$("#cTemp").css('display', 'none');
-						} else if ($(this).val() === 'cel') {
-							$("#cTemp").css('display', 'inline');
-							$("#fTemp").css('display', 'none');
-							$("#kTemp").css('display', 'none');
-						} else if ($(this).val() === 'world') {
-							$("#cTemp").css('display', 'inline');
-							$("#fTemp").css('display', 'inline');
-							$("#kTemp").css('display', 'none');
-						} else if ($(this).val() === 'all') {
-							$("#cTemp").css('display', 'inline');
-							$("#fTemp").css('display', 'inline');
-							$("#kTemp").css('display', 'inline');
+					var backgroundColor;
+
+					$("input[name$='color']").click(function () {
+						let backgroundColor = greenColors;
+						if ($(this).val() === "default") {
+							backgroundColor = greenColors;
 						} else {
-							$("#cTemp").css('display', 'none');
-							$("#fTemp").css('display', 'none');
-							$("#kTemp").css('display', 'none');
+							backgroundColor = purpleColors;
 						}
+						if (fTemp > 100) {
+							$('body').css('background-color', backgroundColor[9]);
+						} else if (fTemp > 90) {
+							$('body').css('background-color', backgroundColor[8]);
+						} else if (fTemp > 80) {
+							$('body').css('background-color', backgroundColor[7]);
+						} else if (fTemp > 70) {
+							$('body').css('background-color', backgroundColor[6]);
+						} else if (fTemp > 60) {
+							$('body').css('background-color', backgroundColor[5]);
+						} else if (fTemp > 50) {
+							$('body').css('background-color', backgroundColor[4]);
+						} else if (fTemp > 40) {
+							$('body').css('background-color', backgroundColor[3]);
+						} else if (fTemp > 30) {
+							$('body').css('background-color', backgroundColor[2]);
+						} else if (fTemp > 20) {
+							$('body').css('background-color', backgroundColor[1]);
+						} else {
+							$('body').css('background-color', backgroundColor[0]);
+						}
+						})
+						//user selected output  
+						$("input[name$='temp']").click(function () {
+							if ($(this).val() === "science") {
+								$("#kTemp").css('display', 'inline');
+								$("#fTemp").css('display', 'none');
+								$("#cTemp").css('display', 'none');
+							} else if ($(this).val() === "far") {
+								$("#fTemp").css('display', 'inline');
+								$("#kTemp").css('display', 'none');
+								$("#cTemp").css('display', 'none');
+							} else if ($(this).val() === 'cel') {
+								$("#cTemp").css('display', 'inline');
+								$("#fTemp").css('display', 'none');
+								$("#kTemp").css('display', 'none');
+							} else if ($(this).val() === 'world') {
+								$("#cTemp").css('display', 'inline');
+								$("#fTemp").css('display', 'inline');
+								$("#kTemp").css('display', 'none');
+							} else if ($(this).val() === 'all') {
+								$("#cTemp").css('display', 'inline');
+								$("#fTemp").css('display', 'inline');
+								$("#kTemp").css('display', 'inline');
+							} else {
+								$("#cTemp").css('display', 'none');
+								$("#fTemp").css('display', 'none');
+								$("#kTemp").css('display', 'none');
+							}
+						});
 					});
 				});
 			});
-		});
-	}
+		}
 });
